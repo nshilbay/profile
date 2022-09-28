@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+
+            input[type=text], select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid rgb(45, 74, 99);
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+            }
+
+            input[type=submit] {
+                background-color:rgb(45, 74, 99);
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: rgb(45, 74, 99);
+            }
+
+            .container {
+                border-radius: 5px;
+                background-color: white;
+                padding: 10px;
+            }
+
+            .column {
+                float: left;
+                width: 50%;
+                margin-top: 6px;
+                padding: 20px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            @media screen and (max-width: 600px) {
+                .column, input[type=submit] {
+                    width: 100%;
+                    margin-top: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div style="text-align:center">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="./imgs/bluemap.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Your first name:">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Your last name:">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                        </select>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                        <input type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
